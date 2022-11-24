@@ -1,12 +1,14 @@
 package com.patient.model;
 
+
 /**
  * @author KL105911
  *
  */
-public class AddressListSO {
-	
-	private long addrId;
+public class PatientAddress {
+
+
+	private long patientAdrId;
 
 	private String addressLine1;
 	private String addressLine2;
@@ -19,6 +21,21 @@ public class AddressListSO {
 	
 	private String addrType;
 
+
+	/**
+	 * @return the patientAdrId
+	 */
+	public long getPatientAdrId() {
+		return patientAdrId;
+	}
+
+	/**
+	 * @param patientAdrId the patientAdrId to set
+	 */
+	public void setPatientAdrId(long patientAdrId) {
+		this.patientAdrId = patientAdrId;
+	}
+
 	/**
 	 * @return the addressLine1
 	 */
@@ -27,17 +44,17 @@ public class AddressListSO {
 	}
 
 	/**
-	 * @return the addressLine2
-	 */
-	public String getAddressLine2() {
-		return addressLine2;
-	}
-
-	/**
 	 * @param addressLine1 the addressLine1 to set
 	 */
 	public void setAddressLine1(String addressLine1) {
 		this.addressLine1 = addressLine1;
+	}
+
+	/**
+	 * @return the addressLine2
+	 */
+	public String getAddressLine2() {
+		return addressLine2;
 	}
 
 	/**
@@ -90,31 +107,6 @@ public class AddressListSO {
 	}
 
 	/**
-	 * 
-	 * Constructore to set address object
-	 * 
-	 * @param addressLine1
-	 * @param addressLine2
-	 * @param state
-	 * @param country
-	 * @param pincode
-	 */
-	public AddressListSO(long addrId, String addressLine1, String addressLine2, String state, String country, String pincode,String addrType) {
-
-		this.addrId=addrId;
-		this.addressLine1 = addressLine1;
-		this.addressLine2 = addressLine1;
-		this.state = state;
-		this.country = country;
-		this.pincode = pincode;
-		this.addrType=addrType;
-	}
-
-	public AddressListSO() {
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
 	 * @return the addrType
 	 */
 	public String getAddrType() {
@@ -128,18 +120,7 @@ public class AddressListSO {
 		this.addrType = addrType;
 	}
 
-	/**
-	 * @return the addrId
-	 */
-	public long getAddrId() {
-		return addrId;
-	}
 
-	/**
-	 * @param addrId the addrId to set
-	 */
-	public void setAddrId(long addrId) {
-		this.addrId = addrId;
-	}
+	
 
 }

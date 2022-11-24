@@ -60,6 +60,19 @@ public class PatientLocator {
 		Button btnRegister = new Button(shell, SWT.NONE);
 		btnRegister.setBounds(10, 8, 90, 30);
 		btnRegister.setText("REGISTER");
+		
+		btnRegister.addListener(SWT.Selection, new Listener()
+
+		{
+			public void handleEvent(Event e) {
+				Registration registration = new Registration();
+				shell.close();
+				display.dispose();
+				registration.open(true, false, false, null);
+				
+			}
+		});
+		
 		shell.open();
 		shell.layout();
 		while (!shell.isDisposed()) {
@@ -331,7 +344,7 @@ public class PatientLocator {
 			item.setText(1, patient.getPatientName());
 
 			if (patient.getPatientDOB() != null) {
-				DateFormat df = new SimpleDateFormat("mm-dd-yyyy");
+				DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
 				String sDate = df.format(patient.getPatientDOB().getTime());
 				item.setText(2, sDate);
 			}

@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.patient.model.Patient;
 import com.patient.model.PatientDetailsSO;
 
 public class PatientClient {
@@ -92,7 +93,7 @@ public static String removePatientDetails(PatientDetailsSO patientSO) throws IOE
 	return mapper.writeValueAsString(response.body());
 }
 
-public static PatientDetailsSO updatePatientDetails(PatientDetailsSO patientSO) throws IOException, InterruptedException{
+public static PatientDetailsSO updatePatientDetails(Patient patientSO) throws IOException, InterruptedException{
 	
 	String savePatientUrl="http://localhost:8080/patient/updatePatientDetails";
 	ObjectMapper mapper = new ObjectMapper();

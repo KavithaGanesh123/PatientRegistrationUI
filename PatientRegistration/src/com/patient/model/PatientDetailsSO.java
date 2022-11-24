@@ -15,7 +15,7 @@ public class PatientDetailsSO {
 	
 	private String patientName;
 	
-	 @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss.SSS")
+	 @JsonFormat(pattern="dd/MM/yyyy HH:mm:ss.SSS")
 	private Date patientDOB;
 	
 	private List<PatientIdentifierSO> patientIdentifiers;
@@ -28,6 +28,8 @@ public class PatientDetailsSO {
 	private String alternateContactNumber;
 	
 	private String statusMsg;
+	
+	private String addrType;
 	
 
 	/**
@@ -141,6 +143,20 @@ public class PatientDetailsSO {
 	 */
 	public void setStatusMsg(String statusMsg) {
 		this.statusMsg = statusMsg;
+	}
+
+	/**
+	 * @return the addrType
+	 */
+	public String getAddrType() {
+		return addrType;
+	}
+
+	/**
+	 * @param addrType the addrType to set
+	 */
+	public void setAddrType(String addrType) {
+		this.addrType = addrType;
 	}
 	
 
